@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Classes 365</title>
-    <link rel="stylesheet" href="/css/index.css">
-    <script src="https://kit.fontawesome.com/1f0d83d9cc.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/index.css" />
+    <link rel="stylesheet" href="contact.css">
+    <script
+      src="https://kit.fontawesome.com/1f0d83d9cc.js"
+      crossorigin="anonymous"
+    ></script>
     <style>
       /* Styles for the contact form */
-      body{
+      body {
         background-color: #080808;
         color: #fff;
         background-image: url(/image/bg-img.jpg);
@@ -18,7 +22,7 @@
         background-attachment: fixed;
         background-position: center;
       }
-      body h1{
+      body h1 {
         text-align: center;
         margin-top: 5%;
       }
@@ -50,7 +54,7 @@
       }
 
       input[type="submit"] {
-        background-color: #4CAF50;
+        background-color: #4caf50;
         color: #fff;
         padding: 10px 20px;
         border: none;
@@ -76,7 +80,7 @@
       .form-success {
         color: green;
       }
-      .email-id{
+      .email-id {
         text-decoration: none;
         color: #ccc;
         cursor: pointer;
@@ -84,76 +88,95 @@
     </style>
   </head>
   <body>
-      
-    <header>
-        <div class="container">
-            <nav>
-                <img src="/image/logo.png" class="logo">
-                <ul>
+    <div id="header">
+      <div class="container">
+          <nav>
+              <img src="/image/logo.png" class="logo">
+              <a href=""><i class="fa-solid fa-bars hamburger" id="myLink"></i></a>
+              <div id="myDiv">
+                  <ul>
                     <li><a href="index.html">HOME</a></li>
                     <li><a href="class-notes.html">NOTES</a></li>
-                    <li><a href="">VIDEOS</a></li>
+                    <li><a href="https://www.youtube.com/@Classes365official">VIDEOS</a></li>
                     <li><a href="">BLOGS</a></li>
                     <li><a href="#about">ABOHUT US</a></li>
                     <li><a href="contact.html">CONTACT</a></li>
                 </ul>
-            </nav>
-            
-        </div>
-    </header>
+              </div>
+          </nav>
+      </div>
+   </div>
+   <script>
+      const myLink = document.getElementById("myLink");
+      const myDiv = document.getElementById("myDiv");
 
+      myLink.addEventListener("click", function(event) {
+      event.preventDefault();
+  
+      if (myDiv.style.display === "block") {
+    myDiv.style.display = "none";
+    } else {
+    myDiv.style.display = "block";
+    }
+      });
+    </script> 
 
     <h1>Contact Us</h1>
-    <form id="contact-form" method="post" action="send.php">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" placeholder="Enter your name" required>
-
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" placeholder="Enter your email" required>
-
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
-
-      <input type="submit" value="Submit" onclick="submit">
-
-      <div class="form-message"></div>
-    </form>
-
-    <script src="send.js"></script>
-    <script>
-
-    </script>
+    <div class="contact">
+      <iframe
+      src="https://docs.google.com/forms/d/e/1FAIpQLSfN8W12WJcGziZTK8s9RrlO1Id63FbTIJOaP6IRbpjtips87w/viewform?embedded=true"
+      width="100%"
+      height="100%"
+      frameborder="0" marginheight="0" marginwidth="0"
+      >Loading…
+    </iframe>
+    </div>
+    
 
     <footer>
-        <div class="container">
-          <div class="row">
-            <div class="col-md-4">
-              <h4>About Us</h4>
-              <p>We are a company dedicated to providing quality education to the students.</p>
-            </div>
-            <div class="col-md-4">
-              <h4>Contact Us</h4>
-              <p>Mangaldai , Assam , India<br>
-                <a href="tel:" class="email-id">Phone: +91 XXXXXXXXXX </a><br>
-                <a href="https://wa.me/" class="email-id">W: +91 XXXXXXXXXX </a><br>
-                <a href="mailto:contact@classes365.in" class="email-id">Email: contact@classes365.in</a>
-              </p>
-            </div>
-            <div class="col-md-4">
-              <h4>Follow Us</h4>
-              <ul class="social-icons">
-                <li><a href="https://www.facebook.com/Classes365"><i class="fab fa-facebook-f"></i></a></li>
-                <li><a href="https://www.instagram.com/365classes"><i class="fab fa-instagram"></i></a></li>
-                <li><a href="https://t.me/classes365"><i class="fab fa-telegram"></i></a></li>
-              </ul>
-            </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h4>About Us</h4>
+            <p>
+              We are a company dedicated to providing quality education to the
+              students.
+            </p>
+          </div>
+          <div class="col-md-4">
+            <h4>Contact Us</h4>
+            <p>
+              Mangaldai , Assam , India<br />
+              <a href="tel:" class="email-id">Phone: +91 XXXXXXXXXX </a><br />
+              <a href="https://wa.me/" class="email-id">W: +91 XXXXXXXXXX </a
+              ><br />
+              <a href="mailto:contact@classes365.in" class="email-id"
+                >Email: contact@classes365.in</a
+              >
+            </p>
+          </div>
+          <div class="col-md-4">
+            <h4>Follow Us</h4>
+            <ul class="social-icons">
+              <li>
+                <a href="https://www.facebook.com/Classes365"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/365classes"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://t.me/classes365"
+                  ><i class="fab fa-telegram"></i
+                ></a>
+              </li>
+            </ul>
           </div>
         </div>
-      </footer>
-
-
-
-
-
+      </div>
+    </footer>
   </body>
 </html>
